@@ -1,0 +1,92 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    width: 320px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    background: #f1f3f4;
+    color: #333;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    height: 60px;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    /* box-shadow: 10px 10px lightblue; */
+    border-radius: 8px;
+}
+
+button:hover {
+    filter: brightness(90%);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.operator {
+    background: #ff6b6b;
+    color: white;
+}
+
+.operator:hover {
+    background: #ff5252;
+}
+
+.equal {
+    background: #4caf50;
+    color: white;
+    grid-column: span 2;
+}
+
+.equal:hover {
+    background: #45a049;
+}
+
+button:not(.operator, .equal) {
+    background: #42a5f5;
+    color: white;
+}
+
+button:not(.operator, .equal):hover {
+    background: #1e88e5;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+    }
+}
