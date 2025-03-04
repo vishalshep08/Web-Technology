@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Unit Converter</h1>
+
+        <!-- Length Conversion -->
+        <div class="section">
+            <h3>Length Converter</h3>
+            <input type="text" id="length-input" class="input" placeholder="Enter value">
+            <select id="length-from" class="dropdown">
+                <option value="m">Meters</option>
+                <option value="km">Kilometers</option>
+                <option value="mi">Miles</option>
+            </select>
+            <span>to</span>
+            <select id="length-to" class="dropdown">
+                <option value="m">Meters</option>
+                <option value="km">Kilometers</option>
+                <option value="mi">Miles</option>
+            </select>
+            <button onclick="convertLength()">Convert</button>
+            <div id="length-result"></div>
+        </div>
+
+        <!-- Temperature Conversion -->
+        <div class="section">
+            <h3>Temperature Converter</h3>
+            <input type="text" id="temp-input" class="input" placeholder="Enter value">
+            <select id="temp-from" class="dropdown">
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+            </select>
+            <span>to</span>
+            <select id="temp-to" class="dropdown">
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+            </select>
+            <button onclick="convertTemperature()">Convert</button>
+            <div id="temp-result"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
